@@ -22,7 +22,9 @@ export class HomeComponent implements OnInit {
       next: (articleList: Article[]) => {
         this.dataSource = articleList.filter(
           article => article.title !== null || article.story_title !== null
-        );
+        ).sort((a: Article, b: Article) => {
+            return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+        });
       },
       error: error => {
         if (isDevMode()) {
@@ -40,10 +42,11 @@ export class HomeComponent implements OnInit {
     event.stopPropagation();
     this.articleService.delete(id).subscribe({
       next: () => {
-        alert("Deleted!");
         this.dataSource = this.dataSource.filter(
           article => article.objectID !== id
-        );
+        ).sort((a: Article, b: Article) => {
+            return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+        });
       },
       error: error => {
         if (isDevMode()) {
