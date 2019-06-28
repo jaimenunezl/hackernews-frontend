@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/css?family=B612+Mono:400,700&display=swap");
+
+/* global */
+* {
+  font-family: "B612 Mono", monospace;
+}
+
+body {
+  margin: 0px;
+}

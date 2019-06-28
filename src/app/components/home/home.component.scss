@@ -1,0 +1,59 @@
+table {
+  width: 100%;
+  padding: 0px 20px 0px 20px;
+}
+
+th {
+  visibility: hidden;
+}
+
+tr {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+tr:hover {
+  background-color: #fafafa;
+}
+
+tr:hover .delete-icon {
+  display: block;
+}
+
+td {
+  border: 1px #ccc;
+}
+
+#header {
+  background-color: #444444;
+  padding: 50px 25px 50px 25px;
+}
+
+#header-title {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+#header-subtitle {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+#header-title,
+#header-subtitle {
+  color: white;
+}
+
+.delete-icon {
+  display: none;
+}
+
+.article-title,
+.article-time {
+  color: #333;
+  font-size: 13pt;
+}
+
+.article-author {
+  color: #999;
+}
